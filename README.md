@@ -14,11 +14,11 @@ Explore this repo for an end-to-end project on hate speech classification using 
 ## How to run?
 
 ```bash
-conda create -n hate python=3.8 -y
+conda create -n venv python=3.8 -y
 ```
 
 ```bash
-conda activate hate
+conda activate venv
 ```
 
 ```bash
