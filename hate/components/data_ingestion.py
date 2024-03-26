@@ -2,13 +2,13 @@ import os
 import sys
 from zipfile import ZipFile
 from hate.logger import logging
-from hate.exeption import CustomException
-from hate.configuration.gcloud_syncer import gcloud_syncer
+from hate.exception import CustomException
+from hate.configuration.gcloud_syncer import GCloudSync
 from hate.entity.config_entity import DataIngestionConfig
 from hate.entity.artifact_entity import DataIngestionArtifacts
 
 class DataIngestion:
-    def __init__(self, data_ingestion_config: DataIngestionConfig)
+    def __init__(self, data_ingestion_config: DataIngestionConfig):
         self.data_ingestion_config = data_ingestion_config
         self.gcloud = GCloudSync()
 
