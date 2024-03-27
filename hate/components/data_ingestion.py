@@ -7,12 +7,13 @@ from hate.configuration.gcloud_syncer import GCloudSync
 from hate.entity.config_entity import DataIngestionConfig
 from hate.entity.artifact_entity import DataIngestionArtifacts
 
+
 class DataIngestion:
-    def __init__(self, data_ingestion_config: DataIngestionConfig):
+    def __init__(self, data_ingestion_config : DataIngestionConfig):
         self.data_ingestion_config = data_ingestion_config
         self.gcloud = GCloudSync()
 
-    
+
     def get_data_from_gcloud(self) -> None:
         try:
             logging.info("Entered the get_data_from_gcloud method of Data ingestion class")
@@ -20,7 +21,7 @@ class DataIngestion:
 
             self.gcloud.sync_folder_from_gcloud(self.data_ingestion_config.BUCKET_NAME,
                                                 self.data_ingestion_config.ZIP_FILE_NAME,
-                                                self.data_ingestion_config.DATA_INGESTION_ARTIFACTS_DIR,
+                                                self.data_ingestion_config.DATA_INGESTION_ARTIFACTS_DIR
                                                 )
             
             logging.info("Exited the get_data_from_gcloud method of Data ingestion class")
